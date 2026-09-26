@@ -1,23 +1,104 @@
 aid: artfinder
+
 name: Artfinder
-description: 'Artfinder is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://d2m7ibezl7l5lt.cloudfront.net/img/v2/default-share-image.bca336466cdd.jpg
+
+description: Artfinder is an online marketplace that connects independent artists with buyers worldwide, offering a curated selection of original
+  artworks, prints, and sculptures. The platform enables artists to showcase and sell their creations directly to collectors, providing detailed
+  artist profiles, secure transactions, and worldwide shipping. Artfinder emphasizes supporting creative communities and fostering a vibrant art‑selling
+  ecosystem.
+
 url: https://raw.githubusercontent.com/api-evangelist/artfinder/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Marketplace
+- Art
+- E-commerce
+- Community
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/artfinder-hosts.yml
+- type: Vendors
+  url: vendors/artfinder-vendors.yml
+- type: SDKs
+  url: packages/artfinder-packages.yml
+- type: Packages
+  url: packages/artfinder-packages.yml
+- type: Support
+  url: https://help.artfinder.com/
+- type: PrivacyPolicy
+  url: https://www.artfinder.com/help/privacy-policy/
+- type: Pricing
+  url: https://www.artfinder.com/art/price_max-500/
+- type: Newsroom
+  url: https://www.artfinder.com/press/
+- type: Blog
+  url: https://www.artfinder.com/blog/
+- type: GitHubOrganization
+  url: https://github.com/artfinder
+- type: DomainSecurity
+  url: security/artfinder-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/artfinder
+  url: https://www.artfinder.com
+- type: Documentation
+  url: https://about.artfinder.com/
+- type: About
+  url: https://about.artfinder.com/
+- type: Sustainability
+  url: https://about.artfinder.com/sustainability
+- type: Team
+  url: https://about.artfinder.com/team
+- type: BCorp
+  url: https://about.artfinder.com/b-corp
+- type: SellOn
+  url: https://about.artfinder.com/sell
+- type: Curators
+  url: https://about.artfinder.com/curators
+- type: TradeProgram
+  url: https://about.artfinder.com/trade
+- type: PersonalShopping
+  url: https://about.artfinder.com/personal-shopping
+
+apis:
+- name: Artfinder API
+  description: Artfinder provides a marketplace API (no public machine‑readable contract discovered).
+  humanURL: https://about.artfinder.com/
+  baseURL: null
+  aid: artfinder:artfinder-api
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Documentation pages are rendered via JavaScript and no machine‑readable spec was found.
+  evidence:
+  - url: https://about.artfinder.com/
+    status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

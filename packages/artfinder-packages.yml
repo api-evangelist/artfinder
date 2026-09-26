@@ -1,0 +1,33 @@
+generated: '2026-09-26'
+method: probed
+generator: harvest-packages.py
+source: registry metadata endpoints (registry.npmjs.org, pypi.org, rubygems.org, api.nuget.org, packagist.org, crates.io) ; github.com/artfinder
+ownership_rule: 'official: true only when the registry metadata (homepage, repository, author, URLs) names the provider''s domain (artfinder.com,
+  security/artfinder-domain-security.yml) or its accepted GitHub org (artfinder).'
+packages:
+- name: awslib
+  registry: github
+  url: https://github.com/artfinder/awslib
+  language: Python
+  official: true
+  version: null
+  published: '2013-08-16'
+  source_repo: https://github.com/artfinder/awslib
+  evidence: repository in github.com/artfinder, whose profile names the provider's domain
+- name: paypal-python
+  registry: github
+  url: https://github.com/artfinder/paypal-python
+  language: Python
+  official: true
+  version: null
+  published: '2012-07-16'
+  source_repo: https://github.com/artfinder/paypal-python
+  evidence: repository in github.com/artfinder, whose profile names the provider's domain
+- name: artfinder
+  registry: pypi
+  url: https://pypi.org/project/artfinder/
+  language: Python
+  official: false
+  version: 0.0.2
+  published: '2025-04-20'
+  evidence: 'name match only: the metadata names neither the provider''s domain nor its GitHub org'
